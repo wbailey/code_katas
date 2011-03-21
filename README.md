@@ -1,6 +1,6 @@
 ## Code Katas ##
 
-A repository of code katas written using the kata dsl
+A repository of code katas written using the [kata dsl](https://github.com/wbailey/kata "Kata DSL")
 
 ## Installation ##
 
@@ -14,12 +14,12 @@ See the documentation on the [kata gem](https://github.com/wbailey/kata "Kata Ge
 
 ## Contributions ##
 
-* For the project
-* Write kata in the dsl into a new ruby file
-* ruby -c yourkata.rb to verify syntax
+* Fork the project
+* Write kata dsl in a new ruby file
+* ruby -c the file to verify syntax
 * Push commits to your repository
 * Send me a pull request
 
 ## Credits ##
 
-Wes Bailey [Exposing Gotchas](http://exposinggotchas.blogspot.com/ "Exposing Gotchas")
+Wes Bailey ([Exposing Gotchas](http://exposinggotchas.blogspot.com/ "Exposing Gotchas"))

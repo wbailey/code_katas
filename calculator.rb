@@ -13,19 +13,19 @@ kata "Calculator" do
       detail "The method will return the sum of the digits"
       detail "The expression can contain 0, 1 or 2 numbers"
       detail "Then empty string will return 0"
-      example %q{"" sums to 0}
-      example %q{"1" sums to 1}
-      example %q{"1,2" sums to 3}
+      example %q{"" computes to 0}
+      example %q{"1" computes to 1}
+      example %q{"1,2" computes to 3}
     end
 
     requirement "Allow the expression to contain an unknown amount of numbers" do
-      example %q{"1,2,3" sums to 6}
-      example %q{"1,2,5,8" sums to 16}
+      example %q{"1,2,3" computes to 6}
+      example %q{"1,2,5,8" computes to 16}
     end
 
     requirement "Allow the expression to handle new lines between numbers" do
-      example %q{"1\n2\n3" sums to 6}
-      example %q{"2,3\n4" sums to 9}
+      example %q{"1\n2\n3" computes to 6}
+      example %q{"2,3\n4" computes to 9}
       detail %q{Consecutive use of delimeters should raise an exception}
       example %q{"1,\n2" or "1\n,2"}
     end
@@ -39,13 +39,17 @@ kata "Calculator" do
 
   context "Diff Method" do
     requirement "Create a diff method that computes the consecutive differences" do
-      example %q{"3,2,1" sums to 0}
-      example %q{"5,4\n3,2\n1 sums to -5}
+      detail "The expression must contain at least 2 digits"
+      example %q{"1,0" compues to 1}
+      example %q{"3,2,1" computes to 0}
+      example %q{"5,4\n3,2\n1 computes to -5}
+      detail "Expressions with less than 2 digits raise an exception"
+      example %q{"" or "5"}
     end
 
     requirement "The diff methods should raise the same exceptions as the add method" do
-      detail "consecutive delimiters"
-      detail "negative numbers"
+      detail "Consecutive Delimiters"
+      detail "Negative Numbers"
     end
   end
 
@@ -53,19 +57,19 @@ kata "Calculator" do
     requirement "Allow the add method to accept a different delimiter" do
       detail %q{The line of the string will contain "//[delimeter]\n...}
       detail "This line is optional and all previous tests should pass"
-      example %q{"//[;]\n1;2" sums to 3}
+      example %q{"//[;]\n1;2" computes to 3}
       detail %q{"1;2" should raise an exception}
     end
 
     requirement "Allow the diff method to accept a different delimiter like add" do
-      example %q{//[;]\n2;1 sums to 1}
+      example %q{//[;]\n2;1 computes to 1}
     end
 
     requirement "Allow the add/diff methods to handle multiple different delimeters" do
       example %q{multiple delimeters can be specified using "//[delimeter]...[delimeter]\n...}
-      example %q{"//[*][;]\n1*2;3" sums to 6}
-      example %q{"//[*][;][#]\n5*4;3#2" sums to -4}
-      example %q{"//[#][;][*]\n1*2#3;4,5\n6" sums to 21}
+      example %q{"//[*][;]\n1*2;3" computes to 6}
+      example %q{"//[*][;][#]\n5*4;3#2" computes to -4}
+      example %q{"//[#][;][*]\n1*2#3;4,5\n6" computes to 21}
     end
   end
 end

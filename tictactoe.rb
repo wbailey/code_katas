@@ -13,15 +13,19 @@ kata "ASCII Tic Tac Toe" do
     end
   end
 
-  context "making a move" do
+  context "moves" do
     requirement "A player shall be able to make a move on the board" do
       detail "a move is defined by grid cooridinates"
       detail "each move must indicate the piece being moved"
       example "move(1, 1, 'x') defines placing the 'x' piece in the upper, left-most corner"
     end
 
-    requirement "out of bounds should be rejected" do
-      example "move(4, 4, 'x')"
+    requirement "a move should be rejected when it is outside the grid" do
+      example "move 4, 4, 'x'"
+    end
+
+    requirement "amove should be rejected when an invalid piece is played" do
+      example "move 1, 1, 'z'"
     end
   end
 end

@@ -1,2 +1,3 @@
 rvm --install ruby-1.9.2-p180
 rvm --create --install use ruby-1.9.2-p180@code_katas
+bundle install

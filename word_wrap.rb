@@ -37,5 +37,9 @@ kata "WordWrap" do
     requirement "Long words without spaces should be broken at the wrap length" do
       example %q{WordWrap.new(4).wrap("wordword") returns "word\nword"}
     end
+
+    requirement "Strings with long words and spaces should mix breaking words and at spaces" do
+      example %q{WordWrap.new(3).wrap("word word word") returns "wor\nd\nwor\nd\nwor\d"}
+    end
   end
 end

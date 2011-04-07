@@ -42,5 +42,10 @@ kata "WordWrap" do
     requirement "It should wrap three words at word boundaries" do
       example %q{WordWrap.new(5).wrap("word word word") returns "word\nword\nword"}
     end
+
+    requirement "It should wrap three words correctly with a longer wrap length" do
+      detail "Any spaces before the wrap length must stay intact"
+      example %q{WordWrap.new(10).wrap("word word word") returns "word word\nword"}
+    end
   end
 end

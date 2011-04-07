@@ -16,9 +16,7 @@ kata "WordWrap" do
   context %q{"wrap" method} do
     requirement "Create a wrap method that takes a string parameter" do
       example %q{WordWrap.new(5).wrap "this is text"}
-    end
-
-    requirement "The method should raise an exception for non-string parameters" do
+      detail "The method should raise an exception for non-string parameters"
       example %q{WordWrap.new(4).wrap([1,2,3]) raises an exception}
     end
 
@@ -30,22 +28,14 @@ kata "WordWrap" do
       example %q{WordWrap.new(6).wrap("word") returns "word"}
     end
 
-    requirement "It should wrap two words at the word boundary" do
-      example %q{WordWrap.new(5).wrap("word word") returns ""}
-    end
-
-    requirement "It should wrap one long word in the middle" do
-      detail "Meaning words longer than the wrap length are broken"
-      example %q{WordWrap.new(4).wrap("wordword") returns "word\nword"}
-    end
-
-    requirement "It should wrap three words at word boundaries" do
+    requirement "It should wrap text at the last space before the wrap length" do
+      example %q{WordWrap.new(5).wrap("word word") returns "word\nword"}
       example %q{WordWrap.new(5).wrap("word word word") returns "word\nword\nword"}
+      example %q{WordWrap.new(10).wrap("word word word") returns "word word\nword"}
     end
 
-    requirement "It should wrap three words correctly with a longer wrap length" do
-      detail "Any spaces before the wrap length must stay intact"
-      example %q{WordWrap.new(10).wrap("word word word") returns "word word\nword"}
+    requirement "Long words without spaces should be broken at the wrap length" do
+      example %q{WordWrap.new(4).wrap("wordword") returns "word\nword"}
     end
   end
 end

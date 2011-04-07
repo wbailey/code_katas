@@ -26,6 +26,10 @@ kata "WordWrap" do
       example %q{WordWrap.new(4).wrap("") returns ""}
     end
 
+    requirement "It should return one short word as-is" do
+      example %q{WordWrap.new(6).wrap("word") returns "word"}
+    end
+
     requirement "It should wrap two words at the word boundary" do
       example %q{WordWrap.new(5).wrap("word word") returns ""}
     end

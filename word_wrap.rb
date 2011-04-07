@@ -1,4 +1,6 @@
-# Code kata for word wrap
+# Code kata for word wrap.
+# Examples and cases taken from
+# http://thecleancoder.blogspot.com/2010/10/craftsman-62-dark-path.html 
 #
 # Take this kata with the "kata" gem.
 

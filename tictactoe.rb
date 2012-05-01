@@ -24,8 +24,13 @@ kata "ASCII Tic Tac Toe" do
       example "move 4, 4, 'x'"
     end
 
-    requirement "amove should be rejected when an invalid piece is played" do
+    requirement "a move should be rejected when an invalid piece is played" do
       example "move 1, 1, 'z'"
+    end
+
+    requirement "a move should be rejected when a space is occupied" do
+      example "move 1, 1, 'x'"
+      example "move 1, 1, 'o' should be rejected"
     end
   end
 end

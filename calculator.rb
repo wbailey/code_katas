@@ -29,14 +29,28 @@ kata "Calculator" do
       detail "The expression must contain at least 2 digits"
       example %q{"1,0" compues to 1}
       example %q{"3,2,1" computes to 0}
-      example %q{"5,4\n3,2\n1 computes to -5}
+      example %q{"5,4,3,2,1 computes to -5}
       detail "Expressions with less than 2 digits raise an exception"
       example %q{"" or "5"}
     end
+  end
 
-    requirement "The diff methods should raise the same exceptions as the add method" do
-      detail "Consecutive Delimiters"
-      detail "Negative Numbers"
+  context 'Prod Method' do
+    require 'Create a prod method that computes the multiples in the expression' do
+      detail 'The method will return the product of the numbers'
+      example %q{"0" computes to 0}
+      example %q{"2,1" computes to 2}
+      example %q{"3,2,1" computes to 6}
+    end
+  end
+
+  context 'Div Method' do
+    require 'Create a div method that computes the consecutive divisions in the expression' do
+      detail 'The method will return the final quotient of the numbers'
+      detail 'it will raise an exception if the expression contains the number 0'
+      example %q{"2,1" computes to 2}
+      example %q{"3,2,1" computes to 1}
+      example %q{"1,2,3" computes to 0}
     end
   end
 end

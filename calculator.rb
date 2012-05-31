@@ -36,7 +36,7 @@ kata "Calculator" do
   end
 
   context 'Prod Method' do
-    require 'Create a prod method that computes the multiples in the expression' do
+    requirement 'Create a prod method that computes the multiples in the expression' do
       detail 'The method will return the product of the numbers'
       example %q{"0" computes to 0}
       example %q{"2,1" computes to 2}
@@ -45,7 +45,7 @@ kata "Calculator" do
   end
 
   context 'Div Method' do
-    require 'Create a div method that computes the consecutive divisions in the expression' do
+    requirement 'Create a div method that computes the consecutive divisions in the expression' do
       detail 'The method will return the final quotient of the numbers'
       detail 'it will raise an exception if the expression contains the number 0'
       example %q{"2,1" computes to 2}

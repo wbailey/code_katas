@@ -33,4 +33,33 @@ kata "ASCII Tic Tac Toe" do
       example "move 1, 1, 'o' should be rejected"
     end
   end
+
+  context 'display' do
+    requirement "an empty board" do
+      detail "An un-occupied space is represented by an asterisk"
+      detail "it draws all rows and columns"
+    end
+
+    requirement "an o in the middle of the board with un-occupied spaces" do
+      example "move 2, 2, 'o'"
+    end
+
+    requirement "diagonals with un-occupied spaces" do
+      example "move 1, 1, 'o'"
+      example "move 2, 2, 'x'"
+      example "move 3, 3, 'o'"
+    end
+
+    requirement "full board" do
+      example "move 1, 1, 'o'"
+      example "move 1, 2, 'o'"
+      example "move 1, 3, 'o'"
+      example "move 2, 1, 'x'"
+      example "move 2, 2, 'x'"
+      example "move 2, 3, 'o'"
+      example "move 3, 1, 'x'"
+      example "move 3, 2, 'x'"
+      example "move 3, 3, 'o'"
+    end
+  end
 end

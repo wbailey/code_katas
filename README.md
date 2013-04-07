@@ -22,4 +22,6 @@ See the documentation on the [kata gem](https://github.com/wbailey/kata "Kata Ge
 
 ## Credits
 
-Wes Bailey ([Exposing Gotchas](http://exposinggotchas.blogspot.com/ "Exposing Gotchas"))
+[Jason Noble](https://github.com/jasonnoble)  
+[Lloyd Chang](https://github.com/lloydchang)  
+[Wes Bailey](https://github.com/wbailey) ([Exposing Gotchas](http://exposinggotchas.blogspot.com/ "Exposing Gotchas"))

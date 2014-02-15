@@ -29,22 +29,32 @@ kata "Binary Search" do
     example "Searching for 5 returns 2"
   end
 
-  requirement "Provides access to multiple positions for duplicate data" do
-    detail "First call returns first position"
-    detail "Subsequent call returns next position"
-    detail "Handles expired calls for next position like missing elements"
-    detail "Use [1,3,5,5,7,9] as the data set"
-    example "First search for 5 returns 2"
-    example "Second call to search for 5 returns 3"
-  end
-
   requirement "Handles expired call for duplicate elements" do
     detail "Use [1,3,5,5,7,9] as the data set"
     example "Third call to search for 5 is handled like missing element"
   end
+
+  requirement "Supports sorted array of strings" do
+    detail %q{Use ["a", "b", "c", "d"] as the data set}
+    example %q{Searching for "c" returns 2}
+  end
+
+  requirement "Supports duplicate strings" do
+    detail %q{Use ["a", "b", "c", "c", "d"] as the data set}
+    example %q{First search for "c" returns 2}
+    example %q{Second search for "c" returns 3}
+  end
+
+  requirement "Handles expired call for duplicate string elements" do
+    detail %q{Use ["a", "b", "c", "c", "d"] as the data set}
+    example %q{Third call to search for "c" is handled like missing element}
+  end
 end
 
 questions do
+  question "What about supporting duplicate data changed your solution"
+  question "Did your approach get better or worse after dealing with duplicates"
+  question "What was the hardest part about adding support for strings"
   question "Can you think of a different technique for building the kata"
   question "What can you say about the relative merits of the various techniques you chose"
   question "Which is the most likely to make it into production code"

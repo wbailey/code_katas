@@ -1,9 +1,8 @@
 require 'kata'
 
 kata "Binary Search" do
-  detail "Do not use built in array search functions"
-
   requirement "Create a binary search class that is initialized with an array of integers" do
+    detail "Do not use built in array functions"
     detail "The initial array is [1,3]"
     detail "return the index of the search value if found"
     example "searching for 3 returns 1"

@@ -21,7 +21,7 @@ kata "Binary Search" do
 
   requirement "Handles more than trivial sized data set" do
     detail "consider a data set of the first 10000 integers"
-    example "Searching for 899 returns 888"
+    example "Searching for 899 returns 898"
   end
 
   requirement "Supports duplicate elements in the data set" do

@@ -1,6 +1,6 @@
 # Code Katas
 
-A repository of code katas written in a DSL using the [kata gem](https://github.com/wbailey/kata "Kata Gem")
+A repository of code katas written in a DSL using the [kata gem](https://github.com/wbailey/kata "Kata Gem").
 
 ## Installation
 

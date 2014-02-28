@@ -22,7 +22,7 @@ See the documentation on the [kata gem](https://github.com/wbailey/kata "Kata Ge
 
 ## Credits
 
-[Andrew Dixon](https://github.com/spinlock99)
-[Jason Noble](https://github.com/jasonnoble)
-[Lloyd Chang](https://github.com/lloydchang)
+[Andrew Dixon](https://github.com/spinlock99)   
+[Jason Noble](https://github.com/jasonnoble)   
+[Lloyd Chang](https://github.com/lloydchang)   
 [Wes Bailey](https://github.com/wbailey) ([Becoming Medium](http://becomingmedium.com/ "Becoming Medium"))

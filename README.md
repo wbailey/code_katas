@@ -15,7 +15,7 @@ See the documentation on the [kata gem](https://github.com/wbailey/kata "Kata Ge
 ## Contributions
 
 * Fork the project
-* Write kata dsl in a new ruby file
+r Write kata DSL in a new ruby file
 * ruby -c the file to verify syntax
 * Push commits to your repository
 * Send me a pull request

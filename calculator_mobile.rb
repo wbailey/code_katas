@@ -7,19 +7,20 @@ kata "Calculator" do
     detail "Clicking on the Display button will show the expression on the screen"
     detail "Changing the expression and pressing the [Enter] key will update the display on the screen"
     example %q{
-    +-------------------------------+
-    |                               |}
-    example "| __________________________1,2 |"
-    example "|                               |"
-    example "| +-------+                     |"
-    example "| |Display|                     |"
-    example "| +-------+                     |"
-    example "|                               |"
-    example "|                               |"
-    example "|                               |"
-    example "|              1,2              |"
-    example "|                               |"
-    example "+-------------------------------+"
+               +-------------------------------+
+               |                               |
+               | __________________________1,2 |
+               |                               |
+               | +-------+                     |
+               | |Display|                     |
+               | +-------+                     |
+               |                               |
+               |                               |
+               |                               |
+               |              1,2              |
+               |                               |
+               +-------------------------------+
+    }
   end
 
   context "Add Method" do

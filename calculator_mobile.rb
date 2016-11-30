@@ -1,12 +1,24 @@
 require 'kata'
 
 kata "Calculator" do
-  requirement "Create a calculator that is initialized with a string expression" do
-    detail %q{The expression is of the form digits separated by commas: "1,2"}
-    detail "The expression is accessed by a method named expr"
-    detail "The expression can be changed without require a new instance of the calculator"
-    example %q{Calculator.new "1,2"}
-    example %q{Text field to enter the expression}
+  requirement "Create a calculator app that is works with a string expression" do
+    detail "The expression is of the form digits separated by commas: 1,2"
+    detail "The expression is accessed by button named Display"
+    detail "Clicking on the Display button will show the expression on the screen"
+    detail "Changing the expression and pressing the [Enter] key will update the display on the screen"
+    example "+-------------------------------+"
+    example "|                               |"
+    example "| __________________________1,2 |"
+    example "|                               |"
+    example "| +-------+                     |"
+    example "| |Display|                     |"
+    example "| +-------+                     |"
+    example "|                               |"
+    example "|                               |"
+    example "|                               |"
+    example "|              1,2              |"
+    example "|                               |"
+    example "+-------------------------------+"
   end
 
   context "Add Method" do

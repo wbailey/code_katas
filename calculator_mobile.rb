@@ -6,8 +6,9 @@ kata "Calculator" do
     detail "The expression is accessed by button named Display"
     detail "Clicking on the Display button will show the expression on the screen"
     detail "Changing the expression and pressing the [Enter] key will update the display on the screen"
-    example "+-------------------------------+"
-    example "|                               |"
+    example %q{
+    +-------------------------------+
+    |                               |}
     example "| __________________________1,2 |"
     example "|                               |"
     example "| +-------+                     |"

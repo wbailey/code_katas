@@ -9,6 +9,7 @@ kata 'Calculator' do
     detail "The expression is of the form digits separated by commas: '1,2'"
     detail 'The expression can be created, retrieved, updated and deleted'
     example 'GET http://localhost:3000/expression/1'
+    example "  => Payload: {input: '1,2'}"
     example 'POST http://localhost:3000/expression/'
     example "  => Payload: {input: '1,2'}"
   end
